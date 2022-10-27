@@ -32,7 +32,7 @@ function click(){
 }
 
 picture{
-    margin: 10px;
+    margin: 1vmin;
     display: inline-block;
 }
 

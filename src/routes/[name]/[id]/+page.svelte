@@ -84,12 +84,12 @@ function move(event) {
 	{#if $highlighted}
 		<div class="fullscreen" on:click={()=> highlighted.set(undefined)}>
 			<button on:click|stopPropagation={()=>go(-1)}>&lt;</button>
-			<Image id={$highlighted} height={maxHeight}></Image>
+			<Image id={$highlighted} height={maxHeight * 3}></Image>
 			<button on:click|stopPropagation={()=>go(1)}>&gt;</button>
 		</div>
 	{/if}
 	<section>
-		{#each $images?.slice(0, limit) as id, index}
+		{#each $images as id, index}
 			<Image width={Math.min(255, maxWidth / 4)} height={Math.min(255, maxWidth / 4)} {id}></Image>
 		{:else}
 			No images found...

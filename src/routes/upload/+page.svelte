@@ -54,6 +54,6 @@
 
 <div>
     {#each $images as img}
-        <Image id={img} ></Image>
+        <Image id={img} width={255} height={255} ></Image>
     {/each}
 </div>

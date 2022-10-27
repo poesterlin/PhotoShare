@@ -33,7 +33,7 @@
 		const observer = new IntersectionObserver(handleIntersect, options);
 		observer.observe(footer);
 
-		maxWidth = Math.floor(window.innerWidth * 0.70);
+		maxWidth = Math.floor(window.innerWidth * 0.75);
 		maxHeight = Math.floor(window.innerHeight * 0.95);
 	});
 
@@ -90,7 +90,7 @@ function move(event) {
 	{/if}
 	<section>
 		{#each $images?.slice(0, limit) as id, index}
-			<Image width={250} height={250} {id}></Image>
+			<Image width={Math.min(255, maxWidth / 4)} height={Math.min(255, maxWidth / 4)} {id}></Image>
 		{:else}
 			No images found...
 		{/each}

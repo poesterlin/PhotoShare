@@ -38,9 +38,7 @@ picture{
 
 picture, picture>* {
     background: rgba(255, 255, 255, 0.25);
-    min-width: 256px;
-    min-height: 256px;
-    max-width: 95vmin;
+    max-width: calc(100vmin - 80px);
     max-height: 95vmin;
     object-fit: contain;
 }
